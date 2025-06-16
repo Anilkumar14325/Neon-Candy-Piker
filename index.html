@@ -9,7 +9,6 @@
 </head>
 <body>
     <div id="game-container">
-        <!-- Home Screen -->
         <div id="home-screen" class="screen active">
             <div class="home-header">
                 <div class="menu-container">
@@ -18,6 +17,12 @@
                         <button id="howToPlayButton">How to Play</button>
                         <button id="themesButton">Themes</button>
                         <button id="viewAchievementsButton">Achievements</button>
+                        <div class="sound-controls">
+                            <label for="bg-music-toggle">Music:</label>
+                            <input type="checkbox" id="bg-music-toggle" checked>
+                            <label for="bg-music-volume">Volume:</label>
+                            <input type="range" id="bg-music-volume" min="0" max="1" step="0.01" value="0.5">
+                        </div>
                     </div>
                 </div>
                 <button id="userProfileButton">User Profile</button>
@@ -30,7 +35,6 @@
             </div>
         </div>
 
-        <!-- Jar Mode Selection Screen -->
         <div id="jar-mode-screen" class="screen">
             <h1>Select Jar Mode</h1>
             <div class="mode-buttons">
@@ -42,47 +46,37 @@
             <button id="backToHomeFromJarMode" class="back-button">Back to Home</button>
         </div>
 
-        <!-- Classic Level Selection Screen -->
         <div id="classic-level-screen" class="screen">
             <h1>Classic Mode Levels</h1>
             <div id="classic-level-grid" class="level-grid">
-                <!-- Level buttons will be dynamically inserted here -->
-            </div>
+                </div>
             <button id="backToJarMode" class="back-button">Back to Modes</button>
         </div>
 
-        <!-- Blitz Level Selection Screen -->
         <div id="blitz-level-screen" class="screen">
             <h1>Blitz Mode Levels</h1>
             <div id="blitz-level-grid" class="level-grid">
-                <!-- Level buttons will be dynamically inserted here -->
-            </div>
+                </div>
             <button id="backToJarModeFromBlitz" class="back-button">Back to Modes</button>
         </div>
 
-        <!-- Endless Difficulty Selection Screen -->
         <div id="endless-difficulty-screen" class="screen">
             <h1>Endless Mode Difficulties</h1>
             <div id="endless-level-grid" class="level-grid">
-                <!-- Level buttons will be dynamically inserted here -->
-            </div>
+                </div>
             <button id="backToJarModeFromEndless" class="back-button">Back to Modes</button>
         </div>
 
-        <!-- Hardcore Difficulty Selection Screen -->
         <div id="hardcore-difficulty-screen" class="screen">
             <h1>Hardcore Mode Difficulties</h1>
             <div id="hardcore-level-grid" class="level-grid">
-                <!-- Level buttons will be dynamically inserted here -->
-            </div>
+                </div>
             <button id="backToJarModeFromHardcore" class="back-button">Back to Modes</button>
         </div>
 
-        <!-- Game Screen (Candy Sorter) -->
         <div id="game-screen" class="screen">
             <h1 id="game-title">Neon Candy Sorter</h1>
-            <div id="game-top-controls"> <!-- Renamed from game-controls and moved -->
-                <button id="pauseGameButton">⏸️ Pause</button>
+            <div id="game-top-controls"> <button id="pauseGameButton">⏸️ Pause</button>
                 <button id="restartGameButton">🔁 Restart</button>
                 <button id="exitToMenuButton">⬅️ Menu</button>
                 <button id="exitGameButton">🏠 Home</button>
@@ -96,16 +90,12 @@
             </div>
             <div id="game-area">
                 <div id="shape-box">
-                    <!-- Draggable shapes will appear here -->
-                </div>
+                    </div>
                 <div id="game-bins">
-                    <!-- Bins will be dynamically inserted here -->
-                </div>
+                    </div>
             </div>
-            <!-- The game-controls div is now game-top-controls -->
-        </div>
+            </div>
 
-        <!-- How to Play Screen -->
         <div id="how-to-play-screen" class="screen">
             <h1>How to Play</h1>
             <p><strong>Candy Sorter:</strong></p>
@@ -118,40 +108,26 @@
             <button id="backToHomeFromHowToPlay" class="back-button">Back to Home</button>
         </div>
 
-        <!-- Themes Screen -->
         <div id="themes-screen" class="screen">
             <h1>Themes</h1>
             <div class="theme-options-wrapper">
-                <!-- Themes will be dynamically inserted here by JavaScript -->
-            </div>
+                </div>
             <button id="backToHomeFromThemes" class="back-button">Back to Home</button>
         </div>
 
-        <!-- Achievements Gallery Screen -->
         <div id="gallery-screen" class="screen">
             <h1>Achievements</h1>
             <ul id="achievement-list">
-                <!-- Achievements will be dynamically loaded here -->
-            </ul>
+                </ul>
             <button id="backToHomeFromGallery" class="back-button">Back to Home</button>
         </div>
 
-        <!-- Custom Modal Container (for messages, pauses, game over) -->
         <div id="custom-modal-container"></div>
 
-        <!-- Floating Popup for Achievements/Bonuses -->
         <div id="achievement-popup"></div>
 
-        <!-- Sound Controls -->
-        <div class="sound-controls">
-            <label for="bg-music-toggle">Background Music:</label>
-            <input type="checkbox" id="bg-music-toggle" checked>
-            <label for="bg-music-volume">Volume:</label>
-            <input type="range" id="bg-music-volume" min="0" max="1" step="0.01" value="0.5">
-        </div>
     </div>
 
-    <!-- Winning Celebration Overlay -->
     <div id="celebration-overlay" class="celebration-overlay">
         <div class="celebration-content">
             <h2 id="celebration-title">Level Complete!</h2>
