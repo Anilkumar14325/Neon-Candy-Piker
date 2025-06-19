@@ -17,21 +17,7 @@ let currentTheme = localStorage.getItem('selectedTheme') || 'neon'; // Load save
 // New: User related variable
 let userName = localStorage.getItem('userName') || 'Guest'; // Load saved name or 'Guest'
 
-window.onload = function() {
-    // Initialize the AdMob SDK
-    if (typeof (adsbygoogle = window.adsbygoogle || []).requestNonPersonalizedAds === 'undefined') {
-        // SDK not loaded yet, or an error occurred. Handle this case.
-        console.error('AdMob SDK not loaded.');
-    } else {
-        // For GDPR compliance, request non-personalized ads if needed
-        // adsbygoogle.requestNonPersonalizedAds(1); // Or 0 for personalized ads
-        (adsbygoogle = window.adsbygoogle || []).enableAutoStart = true;
-        (adsbygoogle = window.adsbygoogle || []).pauseAutoStart = false;
-        console.log('AdMob SDK initialized.');
-    }
-    // Rest of your game initialization logic
-    // ...
-};
+
 
 
 // Ad-related variables
