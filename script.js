@@ -1884,8 +1884,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-// Load banner ad
-   (adsbygoogle = window.adsbygoogle || []).push({});
+
 
     // Run daily bonus check on load
     checkDailyBonus();
